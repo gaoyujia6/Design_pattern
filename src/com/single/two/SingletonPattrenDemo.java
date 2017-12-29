@@ -1,6 +1,6 @@
 package com.single.two;
 
-public class SingletonPatternDemo {
+public class SingletonPattrenDemo {
 	
 	public static void main(String[] args) {
 		Singleton instance = Singleton.getInstance();

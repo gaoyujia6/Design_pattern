@@ -1,0 +1,18 @@
+one包中（
+Java关于Synchronized关键字在不同位置使用的理解
+Java中的Synchronized关键字
+可以用来修饰同步方法：
+像这样synchronized void f() {/*body*/}
+也可以修饰同步语句块：
+像这样synchronized(object){/*body*/}。
+其中修饰同步方法还可以分为修饰static方法和实例方法。
+其中修饰同步语句块还可以分为修饰instance变量，Object Reference对象引用，class 字面常量。
+当synchronized作用在方法上时，锁住的便是对象实例（this）；
+所以synchronized void f() {/*body*/}和 void f(synchronized(this){/*body*/})是等价的。
+当作用在静态方法时锁住的便是对象对应的Class实例，因为Class数据存在于永久带，因此静态方法锁相当于该类的一个全局锁；
+当synchronized作用于某一个对象实例时，锁住的便是对应的代码块。
+在HotSpot JVM实现中，锁有个专门的名字：对象监视器。
+synchronized(class)
+synchronized(this)
+－＞线程各自获取monitor，不会有等待．
+线程分别获取class和this，不会造成等待的例子：）

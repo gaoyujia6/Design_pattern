@@ -1,4 +1,4 @@
-package com.single.one;
+package com.single.thress;
 
 public class SingleObject {
 	

@@ -1,4 +1,4 @@
-package com.single.thress;
+package com.single.one;
 
 public class Singleton {
 	
@@ -6,7 +6,7 @@ public class Singleton {
 	
 	private Singleton(){}
 	
-	public static synchronized Singleton getInstance(){
+	public static Singleton getInstance(){
 		if(instance == null){
 			return new Singleton();
 		}
